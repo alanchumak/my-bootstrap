@@ -1,0 +1,174 @@
+/* @import '~bootstrap/dist/css/bootstrap.css'; */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+
+.navbar {
+    background-color: rgb(14, 34, 56) !important;
+    /* width: 260px; */
+}
+
+:global(.container).container {
+    /* flex-direction: column; */
+    /* align-items: flex-start; */
+    padding-left: 15px;
+    padding-right: 15px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.navbar-nav {
+    flex-direction: column !important;
+    width: 100%;
+}
+
+.nav-link {
+    font-family: 'Open Sans', sans-serif ;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 21px;
+    color: rgb(158, 169, 180) ;
+
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 14.5px 20px 14.5px 30px;
+    padding-left: 15px !important;
+    margin-right: 15px;
+}
+
+.nav-link:hover {
+    color: rgb(0, 186, 199);
+}
+
+
+.nav-link.active {
+    color: rgb(0, 186, 199) !important;
+    background-color: rgba(0, 186, 199, 0.12);
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+
+
+.dropdown {
+    color: rgb(158, 169, 180);
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+
+
+
+
+.nav-link:focus {
+    /* color: rgb(158, 169, 180); */
+}
+
+/* .nav-link:after{
+    content: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='16' height='16' fill='currentColor' class='bi bi-chevron-down' viewBox='0 0 16 16'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z' /></svg>");
+    margin-left: 51px;
+    transition: transform .2s;
+    /* fill: 'currentColor' !important; */
+/* }
+
+.nav-link[aria-expanded=true]::after {
+    transform: rotate(-180deg);
+}
+
+.nav-link:hover::after{
+    color: red;
+}  */
+
+.nav-item {
+    /* color: red; */
+}
+
+.nav-link svg {
+    margin-right: 10px;
+}
+
+.bi-chevron-down{
+    /* margin-left: 51px; */
+    transition: transform .2s;
+    justify-self: flex-end;
+    margin-left: auto;
+}
+
+.nav-link[aria-expanded=true] .bi-chevron-down{
+    transform: rotate(-180deg);
+}
+
+.subitems {
+    padding-left: 20px;
+    /* padding-left: 6px; */
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+@media (min-width: 992px) {
+    .subitems {
+        padding-left: 6px;
+    }
+}
+
+.subitems .nav-link{
+    padding: 5.8px 0;
+font-size: 12px;
+    line-height: 18px;
+}
+
+.subitems .nav-link:hover{
+    color: white !important;
+    position: relative;    
+}
+
+.subitems .nav-link::before {
+    content: "";
+    border-radius: 6px;
+    height: 6px;
+    width: 6px;
+    background-color: rgb(158, 169, 180);
+    margin-right: 15px;
+    opacity: 0.3;
+}
+
+.subitems .subitem::before {
+    content: "";
+    height: 10px;
+    width: 1px;
+    background-color: rgb(158, 169, 180) ;
+    /* margin-right: 16px; */
+    opacity: 0.3;
+
+    position: relative;
+    left: 18px;
+    top: -4px;
+}
+
+.subitems .subitem:first-child::before{
+    height: 5px;
+    top: 1px;
+}
+
+.subitem {
+    display: flex; 
+    /* else psudo element is invisable */
+}
+
+.subitems .nav-link.active::before {
+    background-color: rgb(0, 168, 199);
+    opacity: 1;
+}
+
+.subitems .nav-link.active{
+    background-color: transparent;
+    color: white !important;
+}
+
+
+
+
+
+
+
+

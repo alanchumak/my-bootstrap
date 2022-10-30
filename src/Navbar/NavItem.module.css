@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap'); 
+/* to index.css? */
+
+.navItem {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 21px;
+    color: rgb(158, 169, 180);
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+
+    padding: 14.5px 20px 14.5px 30px;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    margin-right: 15px;
+}
+
+
+.navItem:hover {
+    color: rgb(0, 186, 199);
+}
+
+:global(.nav-link.active).navItem {
+    color: rgb(0, 186, 199) !important;
+    background-color: rgba(0, 186, 199, 0.12);
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+.navItemIcon {
+    margin-right: 10px;
+}
+
