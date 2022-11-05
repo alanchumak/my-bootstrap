@@ -1,0 +1,9 @@
+/* padding for main */
+.header {
+    display: flex;
+    width: 100%;
+    padding: 30px 15px;
+    /* margin-bottom: 15px; */
+    background-color: #f8fafb;
+    ;
+}

@@ -2,58 +2,45 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import logo from './logo-dark.svg'
-import stylesNavbar from './Navbar.module.css'
-// import  './Navbar.css'
+import styles from './Navbar.module.css'
 import { NavItemDropdown } from './NavItemDropdown'
-import { HouseIcon, PagesIcon } from './Icons';
-import stylesDropdown from './NavItemDropdown.module.css'
+import { HouseIcon, PagesIcon, ChatIcon, CalendarIcon, TasksIcon, EmailIcon } from './Icons';
+import { NavItem } from './NavItem'
 
 
-
-
-function BasicExample() { //expand="lg"
+export function MyNavbar() { 
     let conteinerStyle = 'flex-lg-column'
     return (
-        <Navbar 
-        expand="lg" 
-            className={stylesNavbar.navbar}
-        >
-            <Container 
-                // className={conteinerStyle} 
-                className={stylesNavbar.conteiner} 
-                // className='g-0'
-                fluid
-            >
-                <Navbar.Brand 
-                href="#home"
-                    className={stylesNavbar.brand}
-                >
+        <Navbar expand="lg" className={styles.navbar}>
+            <Container className={styles.conteiner} fluid>
+                <Navbar.Brand href="#home" className={styles.brand}>
                     <img src={logo} alt="..." width="125" height="25"/>
                 </Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" 
-                    className={stylesNavbar.togler}
-                />
-                <Navbar.Collapse id="basic-navbar-nav" className={stylesNavbar.collapse} >
-                    <Nav 
-                        className={stylesNavbar.navbarNav}
-                        
-                    >
-                        <NavItemDropdown title="Dashboards" icon={<HouseIcon/>}>
-                            <Nav.Link className={stylesDropdown.navLink} href="#1">Default</Nav.Link>
-                            <Nav.Link className={stylesDropdown.navLink} href="#2">E-commerce</Nav.Link>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" className={styles.togler}/>
+                <Navbar.Collapse id="basic-navbar-nav" className={styles.collapse} >
+                    <Nav className={styles.navbarNav}>
+                        <NavItemDropdown href="#l00" title="Dashboards" icon={<HouseIcon/>}>
+                            <NavItem href="#1" title='Default'/>
+                            <NavItem href="#2" title='E-commerce'/>
                         </NavItemDropdown>
-                            
-                        <Nav.Link className={stylesDropdown.navLink}  href="#link0"><PagesIcon/>Pages</Nav.Link>
-                        <Nav.Link className={stylesDropdown.navLink}  href="#link1"><PagesIcon/>Chat</Nav.Link>
-                        <Nav.Link className={stylesDropdown.navLink}  href="#link2"><PagesIcon/>Calendar</Nav.Link>
-                        <Nav.Link className={stylesDropdown.navLink}  href="#link3"><PagesIcon/>Email</Nav.Link>
-                        <Nav.Link className={stylesDropdown.navLink}  href="#link4"><PagesIcon/>Tasks</Nav.Link>
-
+                        <NavItemDropdown href="#l0" title='Pages' icon={<PagesIcon />}>
+                            <NavItem href="#l01" title='Account' />
+                            <NavItem href="#l02" title='User' />
+                            <NavItem href="#l03" title='Priciing' />
+                            <NavItem href="#l04" title='Wizzard' />
+                            <NavItem href="#l05" title='Help Center' />
+                            <NavItem href="#l06" title='Invoice' />
+                            <NavItem href="#l07" title='Meitenance' />
+                            <NavItem href="#l08" title='Default' />
+                            <NavItem href="#l09" title='Default' />
+                        </NavItemDropdown>
+                        <NavItem href="#l11" title='Chat' icon={<ChatIcon />}/>
+                        <NavItem href="#l1" title='Calendar' icon={<CalendarIcon />}/>
+                        <NavItem href="#l2" title='Email' icon={<EmailIcon />}/>
+                        <NavItem href="#l3" title='Tasks' icon={<TasksIcon />}/>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
         </Navbar>
     );
 }
-
-export default BasicExample;

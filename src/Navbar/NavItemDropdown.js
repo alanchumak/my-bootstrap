@@ -1,11 +1,10 @@
-import styles from './NavItemDropdown.module.css'
+import styles from './NavItem.module.css'
 import { useState } from 'react'
 import {Collapse, Nav} from 'react-bootstrap';
 import { DropdownArrow } from './Icons';
-import stylesNavbar from './Navbar.module.css'
 
 
-export const NavItemDropdown = ({ title, icon, children }) => {
+export const NavItemDropdown = ({ href, title, icon, children }) => {
     const [open, setOpen] = useState(true);
     let collapseId = `${title}-collapse`
     let subitems = children.map((item, i) =>
@@ -20,7 +19,7 @@ export const NavItemDropdown = ({ title, icon, children }) => {
                 onClick={() => setOpen(!open)}
                 aria-controls={collapseId} 
                 aria-expanded={open}
-                href="#home"
+                href={href}
                 className={styles.navLink}
             >
                 {icon}
