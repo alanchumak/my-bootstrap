@@ -1,0 +1,10 @@
+
+
+@media(min-width: 992px){
+  .main {
+    position: absolute;
+    left: 261px;
+    width: 100%;
+  }
+}
+

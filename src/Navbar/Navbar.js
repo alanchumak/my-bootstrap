@@ -1,6 +1,4 @@
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
+import { Container, Nav, Navbar } from 'react-bootstrap';
 import logo from './logo-dark.svg'
 import styles from './Navbar.module.css'
 import { NavItemDropdown } from './NavItemDropdown'
@@ -8,8 +6,8 @@ import { HouseIcon, PagesIcon, ChatIcon, CalendarIcon, TasksIcon, EmailIcon } fr
 import { NavItem } from './NavItem'
 
 
-export function MyNavbar() { 
-    let conteinerStyle = 'flex-lg-column'
+function MyNavbar() { 
+    // let conteinerStyle = 'flex-lg-column'
     return (
         <Navbar expand="lg" className={styles.navbar}>
             <Container className={styles.conteiner} fluid>
@@ -44,3 +42,5 @@ export function MyNavbar() {
         </Navbar>
     );
 }
+
+export {MyNavbar as Navbar}

@@ -4,21 +4,13 @@ import ReactDOM from 'react-dom/client';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 import reportWebVitals from './reportWebVitals';
 // import Button from 'react-bootstrap/Button';
-// import App from './App'
-import { Navbar } from './Navbar/Navbar'
-import { Header } from './Header'
-
-// import Container from 'react-bootstrap/Container';
-// import Nav from 'react-bootstrap/Nav';
-// import Navbar from 'react-bootstrap/Navbar';
-// import NavDropdown from 'react-bootstrap/NavDropdown';
+import {App} from './App'
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Header/>
-
+    <App />
   </React.StrictMode>
 );
 
