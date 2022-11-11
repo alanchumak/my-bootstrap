@@ -1,1 +1,11 @@
-.btn:active
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+
+.badge{
+    font-size: 10px;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    padding: 3px 8px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+}

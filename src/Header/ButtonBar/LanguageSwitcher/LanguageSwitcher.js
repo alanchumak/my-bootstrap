@@ -1,5 +1,4 @@
 import Dropdown from 'react-bootstrap/Dropdown';
-// import { ThemeSwitcherIcon, DarkModeIcon, AutoModeIcon } from './Icons'
 import buttonBarStyles from '../ButtonBar.module.css'
 import styles from './LanguageSwitcher.module.css'
 
@@ -14,14 +13,14 @@ import cn from './flags/cn.svg'
 export function LanguageSwitcher() {
     const [active, setActive] = useState('us')
 
-    const Item = ({ id, title, icon }) => {
+    const MenuItem = ({ id, title, icon }) => {
         return <Dropdown.Item
             id={id}
-            className={buttonBarStyles.item}
+            className={buttonBarStyles.menuItem}
             active={(active == id)}
             onClick={() => setActive(id)}
             href={"#/action-" + id}>
-            <img src={icon} width='18' height='18' 
+            <img src={icon} 
                 className={`${buttonBarStyles.icon} ${styles.icon}`}/>
                 {title}
         </Dropdown.Item>
@@ -36,17 +35,17 @@ export function LanguageSwitcher() {
                 id="dropdown-basic" 
                 className={`${buttonBarStyles.dropdownToggle} ${styles.dropdownToggle}`}
             >
-                <img src={currLangIcon(active)} width='18' height='18' className={styles.icon} />
+                <img src={currLangIcon(active)} className={`${buttonBarStyles.icon} ${styles.icon}`} />
             </Dropdown.Toggle>
 
             <Dropdown.Menu className={buttonBarStyles.dropdownMenu} >
                 <Dropdown.Header className={styles.menuHeader}>select language</Dropdown.Header>
-                <Item id='us' title='English (US)' icon={us} />
-                <Item id='gb' title='English (UK)' icon={gb} />
-                <Item id='es' title='Español' icon={es} />
-                <Item id='fr' title='Française' icon={fr} />
-                <Item id='de' title='Deutsch' icon={de} />
-                <Item id='cn' title='中文 (繁體)' icon={cn} />
+                <MenuItem id='us' title='English (US)' icon={us} />
+                <MenuItem id='gb' title='English (UK)' icon={gb} />
+                <MenuItem id='es' title='Español' icon={es} />
+                <MenuItem id='fr' title='Française' icon={fr} />
+                <MenuItem id='de' title='Deutsch' icon={de} />
+                <MenuItem id='cn' title='中文 (繁體)' icon={cn} />
                 
             </Dropdown.Menu>
         </Dropdown>

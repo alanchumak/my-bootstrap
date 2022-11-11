@@ -1,10 +1,9 @@
 import Dropdown from 'react-bootstrap/Dropdown';
-// import { ThemeSwitcherIcon, DarkModeIcon, AutoModeIcon } from './Icons'
-// import buttonBarStyles from '../ButtonBar.module.css'
+import buttonBarStyles from '../ButtonBar.module.css'
 // import styles from './LanguageSwitcher.module.css'
 
-export function LanguageSwitcher() {
-    const [active, setActive] = useState('us')
+export function NotificationsMenu() {
+    const [active, setActive] = useState('1')
 
     const Item = ({ id, title, icon }) => {
         return <Dropdown.Item

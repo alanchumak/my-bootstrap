@@ -1,10 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap'); */
 
-.item .icon {
+.menuItem .icon {
     margin-right: 7px;
+    width: 18px;
+    height: 18px;
 }
 
-.item {
+.menuItem {
     display: flex;
     align-items: center;
     line-height: 2em;
@@ -13,17 +15,13 @@
     font-weight: 500;
 }
 
-:global(.dropdown-item.active).item {
+:global(.dropdown-item.active).menuItem {
     background-color: #f6f7f8;
     color: black;
 }
 
-:global(.dropdown-item:active).item {
-    background-color: #f6f7f8;
-    color: black;
-}
 
-.item:hover {
+.menuItem:hover {
     background-color: #f6f7f8;
 }
 
@@ -41,6 +39,12 @@
     color: #9EA9B4;
     border: 0;
     box-shadow: 0 .125rem .125rem 0 rgba(14, 34, 56, .07);
+    /* position: relative; */
+}
+
+.dropdownToggle .icon {
+    width: 18px;
+    height: 18px;
 }
 
 /* override default bs style... */

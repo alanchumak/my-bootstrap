@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap'); */
 
 /* :global(.nav-link).navLink { */
 .navLink {
@@ -22,7 +22,9 @@
     /* letter-spacing */
 }
 
-
+.navLink:visited {
+    color: rgb(158, 169, 180);
+}
 
 /* :global(.nav-link:hover).navLink { */
 .navLink:hover {

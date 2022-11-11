@@ -4,36 +4,41 @@ import {Collapse, Nav} from 'react-bootstrap';
 import { DropdownArrow } from './Icons';
 
 
-export const NavItemDropdown = ({ href, title, icon, children }) => {
+export const NavItemDropdown = ({ href, title, icon, children, onClick, active }) => {
     const [open, setOpen] = useState(true);
     let collapseId = `${title}-collapse`
+    
     let subitems = children.map((item, i) =>
-        <div key={i.toString()} className={styles.subitem}>
+        <div key={i.toString()} className={styles.subitem} onClick={onClick}>
             {item}
         </div>
     )
 
+    let isActive = active == title ? 'active' : ''
+
     return (
         <div>
-            <Nav.Link
+            <a
+            
                 onClick={() => setOpen(!open)}
                 aria-controls={collapseId} 
                 aria-expanded={open}
                 href={href}
-                className={styles.navLink}
+                className={`${styles.navLink} nav-link ${isActive}`}
             >
                 {icon}
                 {title}
                 <DropdownArrow />
-            </Nav.Link>
+            </a>
+            
 
             <Collapse in={open}>
                 <div id={collapseId}>
-                <Nav  className={`${styles.subitems} flex-column`} >
+                <div  className={`${styles.subitems} flex-column`} >
                     {/* <ul className={styles.subitems}> */}
                         {subitems}
                     {/* </ul> */}
-                </Nav>
+                </div>
                 </div>
             </Collapse>
             

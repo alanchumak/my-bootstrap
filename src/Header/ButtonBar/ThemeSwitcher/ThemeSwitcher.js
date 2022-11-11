@@ -8,10 +8,10 @@ import {useState} from 'react'
 export function ThemeSwitcher() {
     const [active, setActive] = useState('light')
 
-    const Item = ({id, title, icon}) => {
+    const MenuItem = ({id, title, icon}) => {
         return <Dropdown.Item 
                     id={id}
-                    className={buttonBarStyles.item} 
+            className={buttonBarStyles.menuItem} 
                     active={(active == id)} 
                     onClick={() => setActive(id)} 
                     href={"#/action-" + id}>
@@ -26,9 +26,9 @@ export function ThemeSwitcher() {
             </Dropdown.Toggle>
 
             <Dropdown.Menu className={buttonBarStyles.dropdownMenu} >
-                <Item id='light' title='Light mode' icon={<ThemeSwitcherIcon />}/>
-                <Item id='dark' title='Dark mode' icon={<DarkModeIcon />}/>
-                <Item id='auto' title='Auto' icon={<AutoModeIcon />}/>
+                <MenuItem id='light' title='Light mode' icon={<ThemeSwitcherIcon />}/>
+                <MenuItem id='dark' title='Dark mode' icon={<DarkModeIcon />}/>
+                <MenuItem id='auto' title='Auto' icon={<AutoModeIcon />}/>
             </Dropdown.Menu>
         </Dropdown>
     );
