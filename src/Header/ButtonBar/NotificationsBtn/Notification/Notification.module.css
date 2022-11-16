@@ -1,0 +1,64 @@
+.avatar {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin-right: 7px;
+}
+
+.emptyAvatar {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin-right: 7px;
+
+    background-color: #e4f4f9 ;
+    color: #2dadcf ;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.notif {
+    display: flex;
+    padding: 15px 20px;
+    border-bottom: 1px solid hsla(214, 7%, 62%, .1);
+
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.5em;
+    cursor: pointer;
+}
+
+.notif:hover {
+    background-color:rgba(229, 248, 249, 255);
+}
+
+.name {
+    font-size: 12px;
+    font-weight: 700;
+    /* line-height: 1.5em; */
+    margin-top: -3px;
+}
+
+.timeAgo {
+    color : rgba(14,34,56, .3525);
+    /* font-size: 14px;
+    font-weight: 500; */
+    /* line-height: 1.5em; */
+}
+
+.subject {
+    /* font-size: 14px;
+    font-weight: 500; */
+    margin-bottom: 4px;
+}
+
+.content {
+    color: rgba(158, 169, 180, .9);
+    font-weight: 400;
+    letter-spacing: 0.18px;
+}

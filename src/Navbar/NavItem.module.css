@@ -1,8 +1,6 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap'); */
 
-/* :global(.nav-link).navLink { */
 .navLink {
-    font-family: 'Open Sans', sans-serif;
+    /* font-family: 'Open Sans', sans-serif; */
     font-size: 14px;
     font-weight: 600;
     line-height: 21px;
@@ -38,9 +36,6 @@
     border-top-right-radius: 30px;
 }
 
-/* :global(.nav-link > svg).navLink {
-    margin-right: 10px;
-} */
 
 .nav-link-icon {
     margin-right: 10px;

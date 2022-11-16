@@ -1,6 +1,7 @@
 import { ThemeSwitcher } from './ThemeSwitcher'
 import { LanguageSwitcher } from './LanguageSwitcher'
 import { NotificationsBtn } from './NotificationsBtn'
+import { ExternalServices } from './ExternalServices'
 import style from './ButtonBar.module.css'
 
 export function ButtonBar() {
@@ -11,6 +12,7 @@ export function ButtonBar() {
             <LanguageSwitcher/>
             <div className={style.separator}></div>
             <NotificationsBtn />
+            <ExternalServices/>
         </div>
     )
 }

@@ -64,31 +64,29 @@
         padding: 30px;
 
         
-            display: block;
-            overflow-y: scroll;
-            height: 100%;
-            position: fixed;
-            top: 0;
+        display: block;
+        overflow-y: scroll;
+        height: 100%;
+        position: fixed;
+        top: 0;
     }
 
     /* .brand {
         margin-bottom: 38px;
     } */
-        .navbarNav{
-            padding-top: 37px !important;
-            padding-bottom: 38px !important;
-            width: 100%;
-            /* margin-left: -30px;
-            margin-right: -30px; */
-        }
+    .navbarNav{
+        padding-top: 37px !important;
+        padding-bottom: 38px !important;
+        width: 100%;
+        /* margin-left: -30px;
+        margin-right: -30px; */
+    }
 
-           .collapse {
-                margin-left: -30px !important;
-                    /* margin-right: -30px !important; */
-                width: calc(100% + 30px);
-           }
-
-
+    .collapse {
+        margin-left: -30px !important;
+            /* margin-right: -30px !important; */
+        width: calc(100% + 30px);
+    }
 }
 
 .navbarNav {

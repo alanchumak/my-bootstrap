@@ -39,7 +39,7 @@ export function LanguageSwitcher() {
             </Dropdown.Toggle>
 
             <Dropdown.Menu className={buttonBarStyles.dropdownMenu} >
-                <Dropdown.Header className={styles.menuHeader}>select language</Dropdown.Header>
+                <Dropdown.Header className={buttonBarStyles.menuHeader}>select language</Dropdown.Header>
                 <MenuItem id='us' title='English (US)' icon={us} />
                 <MenuItem id='gb' title='English (UK)' icon={gb} />
                 <MenuItem id='es' title='Español' icon={es} />

@@ -1,0 +1,70 @@
+.dropdownMenu {
+    box-shadow: 0 1rem 3rem rgba(14, 34, 56, .1);
+    transform: translate(-12px, 24px) !important;
+    /* extract to single class */
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border: 0;
+
+    /* animation-fill-mode: both; */
+    animation-duration: .2s;
+    animation-name: slideIn;
+    border-radius: 10px;
+}
+
+
+@keyframes slideIn {
+    to {
+        margin-top: 0;
+        opacity: 1
+    }
+
+    0% {
+        margin-top: 1rem;
+        opacity: 0
+    }
+}
+
+.threeDots, 
+.threeDots:hover,
+:global(.dropdown-toggle:active).threeDots,
+:global(.dropdown-toggle:focus-visible).threeDots {
+    background-color: white;
+    color: black;
+    border: 0;
+    box-shadow: none !important;
+}
+
+.threeDots {
+    /* padding-top: 4px;
+        margin-top: -4px; */
+        padding-top: 0;
+        padding-bottom: 0;
+        margin-top: -9px;
+}
+
+.threeDots::after {
+    content: none;
+}
+
+.threeDots .icon {
+    width: 21px;
+    height: 21px;
+}
+
+.menuItemIcon {
+    margin-right: 7px;
+    color: rgb(158, 169, 180);
+    /* display: flex;
+    position: relative; */
+}
+
+.menuItemIcon svg {
+    width: 14px;
+        height: 14px;
+}
+
+.divider {
+    /* color: rgb(152, 158, 166); */
+    opacity: 0.4;
+}

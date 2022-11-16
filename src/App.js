@@ -4,7 +4,7 @@ import styles from './App.module.css'
 
 export const App = () => {
   return <>
-    <Navbar/>
+    {/* <Navbar/> */}
       <main className={styles.main}>
         <Header/>
     </main>
