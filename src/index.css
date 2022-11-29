@@ -15,3 +15,33 @@ code {
 body {
     font-family: 'Open Sans', sans-serif;
 }
+
+.scroller{
+  overflow-y: scroll;
+}
+
+.scroller::-webkit-scrollbar {
+  /* background-color: red; */
+  width: 20px;
+  /* -webkit-appearance: none; */
+  background-color: transparent;
+  height: 0.375rem;
+  /* visibility: visible; */
+  visibility: hidden;
+  width: 0.375rem;
+}
+
+.scroller::-webkit-scrollbar-thumb {
+  background-color: hsla(214, 7%, 62%, .4);
+  border-radius: 3px;
+  /* visibility: visible; */
+  visibility: hidden;
+}
+
+.scroller:hover::-webkit-scrollbar-thumb {
+  visibility: visible;
+}
+
+.scroller:hover::-webkit-scrollbar-thumb:hover {
+  background-color: hsla(214, 7%, 62%, .7);
+}

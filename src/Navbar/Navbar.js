@@ -13,7 +13,7 @@ function MyNavbar() {
     const onClickedSubitem = (item) => { setActive(item) }
 
     return (
-        <Navbar expand="lg" className={styles.navbar}>
+        <Navbar expand="lg" className={`${styles.navbar} scroller`}>
             <Container className={styles.conteiner} fluid>
                 <Navbar.Brand href="#home" className={styles.brand}>
                     <img src={logo} alt="..." width="125" height="25"/>

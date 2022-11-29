@@ -13,6 +13,7 @@ export function NotificationsBtn() {
     const handleShow = () => setShow(true);
     let notifications = data.map(item => 
         <Notification 
+            key={item.id}
             name={item.name}
             subject={item.subject}
             content={item.content}
